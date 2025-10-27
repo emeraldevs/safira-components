@@ -1,75 +1,104 @@
-# Nuxt Minimal Starter
+# 💎 Safira Components
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Safira Components** é uma biblioteca moderna de componentes UI desenvolvida em **Nuxt 3**, utilizando **PrimeVue** e **TailwindCSS**, com foco em **performance, reusabilidade e design consistente** para os projetos da **Emerald Devs**.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Tecnologias
+
+- [Nuxt 3](https://nuxt.com/) — Framework Vue moderno e performático
+- [PrimeVue](https://primevue.org/) — Biblioteca rica de componentes UI
+- [TailwindCSS](https://tailwindcss.com/) — Estilização utilitária
+- [pnpm](https://pnpm.io/) — Gerenciador de pacotes rápido e eficiente
+
+---
+
+## 📦 Instalação
+
+Clone o repositório:
 
 ```bash
-# npm
-npm install
+git clone https://github.com/emeraldevs/safira-components.git
+cd safira-components
 
-# pnpm
+Instale as dependências com pnpm:
+
 pnpm install
 
-# yarn
-yarn install
+🧩 Estrutura do Projeto
 
-# bun
-bun install
-```
+safira-components/
+├── components/       # Componentes reutilizáveis
+├── pages/            # Páginas de exemplo e documentação
+├── assets/           # Estilos globais e imagens
+├── plugins/          # Configuração de plugins (PrimeVue, etc.)
+├── nuxt.config.ts    # Configuração principal do Nuxt
+└── package.json
 
-## Development Server
+⚙️ Configuração do PrimeVue
 
-Start the development server on `http://localhost:3000`:
+O módulo do PrimeVue é configurado diretamente no arquivo nuxt.config.ts:
 
-```bash
-# npm
-npm run dev
+import Aura from '@primeuix/themes/aura'
 
-# pnpm
+export default defineNuxtConfig({
+  modules: ['@primevue/nuxt-module'],
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura
+      }
+    }
+  }
+})
+
+🧠 Scripts Disponíveis
+
+# Ambiente de desenvolvimento
 pnpm dev
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
+# Build de produção
 pnpm build
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
+# Preview do build
 pnpm preview
 
-# yarn
-yarn preview
+# Lint (se configurado)
+pnpm lint
 
-# bun
-bun run preview
-```
+🎨 Estilo & Design
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Todos os componentes seguem a identidade visual Safira:
+
+    Design escuro (dark theme)
+
+    Bordas suaves e elementos translúcidos
+
+    Foco em acessibilidade e responsividade
+
+🧱 Criando um Novo Componente
+
+Adicione um novo arquivo dentro da pasta components/:
+
+pnpm nuxi add component MeuComponente
+
+Depois, edite o componente e importe onde precisar:
+
+<template>
+  <MeuComponente />
+</template>
+
+🧭 Roadmap
+
+Documentação interativa dos componentes
+
+Sistema de temas customizáveis
+
+Integração com Emerald Design Tokens
+
+    Testes unitários com Vitest / Jest
+
+💚 Emerald Devs
+
+Desenvolvido com 💎 por Emerald Devs.
+Todos os componentes da Safira são feitos para integrar-se com os sistemas Onyx, Topaz e Sapphire.
